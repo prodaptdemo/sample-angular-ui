@@ -1,0 +1,234 @@
+.textColor{
+  color:white !important
+}
+.navcust {
+    color: #fff;
+    background-color: #00bfa5 !important;
+}
+.nlogo {
+    padding: 11px;
+    display: inline-block;
+}
+.ngHeader{
+  line-height: 67%;
+  font-size: 13px;
+}
+
+.cboxes {
+  margin-bottom: -5%;
+  margin-top: 13%;
+	position: relative;
+  left: 50%;
+    width: 181%;
+	max-width: 900px;
+	height: 180px;
+	font-family: "Open Sans", sans-serif;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.cbox {
+	position: relative;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	background: #FFF;
+	width: 100%;
+	height: 80%;
+	border-radius: 5px;
+	box-shadow: 40px 0 65px rgba(212, 197, 186, 0.4);
+	padding: 0 80px;
+	box-sizing: border-box;
+	opacity: 0;
+	-webkit-transform-origin: center;
+	transform-origin: center;
+	-webkit-transform: scale(1.2, 1.2);
+	transform: scale(1.2, 1.2);
+}
+.cbox:nth-child(1), .cbox:nth-child(2) {
+	position: absolute;
+	/*background: #9E9E9E;*/
+	background: #B2DFDB;
+	/*background: #FF5722;*/
+}
+.cbox:nth-child(1) {
+	left: 3%;
+	width: 94%;
+	/*background: #9E9E9E;*/
+	background: #B2DFDB;
+	/*background: #FF5722;*/
+}
+.cbox:nth-child(2) {
+	left: 2%;
+	width: 96%;
+}
+
+.wizard_progress {
+	position: relative;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.bar {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background: #DEDEDE;
+	width: 100%;
+	height: 3px;
+	border-radius: 10px;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+}
+.bar__fill {
+	display: block;
+	background: #26A69A ;
+	height: 100%;
+}
+
+.point {
+	position: relative;
+	color: #26A69A  ;
+	cursor: pointer;
+}
+.point:before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 120px;
+	height: 120px;
+	border-radius: 100%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	-webkit-transition: 0.3s ease;
+	transition: 0.3s ease;
+}
+.show-radius .point:before {
+	background: rgba(0, 0, 0, 0.1);
+}
+.point--complete, .point--active {
+	color: #26A69A  ;
+}
+
+.bullet {
+	z-index: 1;
+	position: relative;
+	background: #26A69A ;
+	width: 8px;
+	height: 8px;
+	border-radius: 100%;
+	-webkit-transition: 0.3s ease;
+	transition: 0.3s ease;
+}
+.point--complete .bullet, .point--active .bullet {
+	background: #FFFFFF;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 0 6px #26A69A;
+}
+.point--active .bullet {
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 0 10px #26A69A;
+}
+
+.wizard_label {
+      width: 87px;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin: 20px 0 0 0;
+	font-weight: bold;
+	-webkit-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+}
+.card-nav{
+  border:1px;
+  margin:10px -8px;
+  height:100px;
+  border-radius: 5px;
+  text-align:center;
+  color:white;
+  font-size: 22px;
+  padding: 12px 0px 0px 0px;
+}
+.card-left{
+  height:inherit;
+  margin-top:-15px;
+  width:102%;
+}
+.card-right{
+  height:243px;
+  width:102%;
+}
+.dashboard-button{
+  border-radius: 36px;
+  text-transform: initial;
+  margin-left: 134px;
+  margin-top: 22px;
+  background-color: #FF8D1C  ;
+}
+h6{
+  font-weight:bold !important;
+}
+.icon-style{
+  width:44px;
+  height:65px;
+}
+.bodyContent {
+    overflow-y:hidden;
+}
+.cursor{
+	cursor: pointer;
+}
+.defaultColor{
+	background-color: #FF8D1C;
+}
+.btn:hover, .btn-large:hover,.btn:focus, .btn-large:focus, .btn-floating:focus  {
+    background-color: #e65100 !important;
+}
+[hidden]{display:none!important}
+
+.redColor{
+	color:red;
+}
+.dividerBlack{
+	margin-top: -15px;
+	background-color: black !important;
+}
+
+.leftAlign{
+	margin-left: 14px !important;
+}
+.pClass{
+      margin-top: -22px !important;
+    color: gray !important;
+}
+.bottomHeight{
+	margin-bottom: 11px !important;
+  color: gray !important;
+}
+.hidden{
+  display: none ;
+}
+    

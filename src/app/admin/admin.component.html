@@ -1,0 +1,209 @@
+<div id="dashboard" [hidden]="!showDashboard" class="container">
+    <div class="row" style="margin-right:-2%">
+        <div class=" col s3 ">
+            <div class="card-nav row" style="background-color:#a127b0">
+                <div class="col s2"><img src="assets/images/group.png" class="icon-style" alt="Group"></div>
+                <div class="col s10"><b><span style="font-size:20px">5</span><br>Resource Group</b></div>
+            </div>
+        </div>
+        <div class="  col s3 ">
+            <div class="card-nav" style="background-color:#e91e85">
+                <div class="col s2"><img src="assets/images/storage.png" class="icon-style" alt="Group"></div>
+                <div class="col s10"><span style="font-size:20px">950 GiB&nbsp;/&nbsp;2000GiB</span>
+                    <br><b>Data Storage</b></div>
+            </div>
+        </div>
+        <div class=" col s3 ">
+            <div class="card-nav" style="background-color:orange">
+                <div class="col s2"><img src="assets/images/cluster.png" class="icon-style" alt="Group"></div>
+                <div class="col s10"><b><span style="font-size:20px">2</span><br>Active Clusters</b></div>
+            </div>
+        </div>
+        <div class=" col s3 ">
+            <div class="card-nav" style="background-color:lightblue">
+                <div class="col s2"><img src="assets/images/earth-globe.png" class="icon-style" alt="Group"></div>
+                <div class="col s10"><b><span style="font-size:20px">2</span><br>Regions</b></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="row" [hidden]="!showMsg">
+            <div class="alert-msg-success" style="display:none;margin-top:-2%" id="successBlock">
+                <div class="card-alert card #43a047 green darken-1" style="height:35px;margin-left:1%;margin-right:1%;">
+                    <div class="card-content white-text">
+                        <p style="margin-top:-2%"><span id="clusterMsg"></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="alert-msg-error" style="display:none;margin-top:-2%" id="errorBlock">
+                <div class="card-alert card red" style="height:35px;margin-left:1%;margin-right:1%;">
+                    <div class="card-content white-text">
+                        <p style="margin-top:-2%"><span id="errorMsg"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s8">
+            <div class="card large card-left">
+                <div class="card-content">
+                    <h6>Cluster Details</h6>
+                    <div class="divider"></div>
+                    <table class="bordered responsive-table">
+                        <thead style="color:#e91e69;font-size:14px">
+                            <tr>
+                                <th>Cluster Name</th>
+                                <th>Description</th>
+                                <th>AGN</th>
+                                <th>Region</th>
+                                <th>Storage</th>
+                                <th>Total Nodes
+                                    <br>[Master/Slave]</th>
+                            </tr>
+                        </thead>
+                        <tbody style="font-size:12px">
+                            <tr>
+                                <td>1TMC_HA</td>
+                                <td>Denver Transport Management Center's High Available Spark Cluster</td>
+                                <td>Denver Gov</td>
+                                <td>US East</td>
+                                <td>500 GiB</td>
+                                <td>4 Master/5 Worker</td>
+                            </tr>
+                            <tr>
+                                <td>2TMC_HA</td>
+                                <td>Denver Transport Management Center's High Available Spark Cluster</td>
+                                <td>Denver Gov</td>
+                                <td>US East</td>
+                                <td>500 GiB</td>
+                                <td>4 Master/5 Worker</td>
+                            </tr>
+                            <tr>
+                                <td>3TMC_HA</td>
+                                <td>Denver Transport Management Center's High Available Spark Cluster</td>
+                                <td>Denver Gov</td>
+                                <td>US East</td>
+                                <td>500 GiB</td>
+                                <td>4 Master/5 Worker</td>
+                            </tr>
+                            <tr>
+                                <td>4TMC_HA</td>
+                                <td>Denver Transport Management Center's High Available Spark Cluster</td>
+                                <td>Denver Gov</td>
+                                <td>US East</td>
+                                <td>500 GiB</td>
+                                <td>4 Master/5 Worker</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <div class="col s4">
+            <div class="card card-right" style="margin-top:-24px">
+                <div style="margin-left:15px">
+                    <h6>Create Cluster</h6>
+                    <div class="divider"></div>
+                    <p style="font-size:14px">Enterprise Data Management portal lets you create big data clusters and underlying data stores
+                        <br>
+                        <br>Get Started with creating clusters</p>
+                </div>
+                <button class="btn waves-effect waves-light dashboard-button" type="submit" id="createCluster_btn" (click)="showClusterPage()" name="createCluster">Create Cluster
+                </button>
+            </div>
+            <div class="card card-right">
+                <div style="margin-left:15px">
+                    <h6>Scale Existing Cluster</h6>
+                    <div class="divider"></div>
+                    <p style="font-size:14px">User friendly wizard lets you scale Big-data clusters and underlying Data Stores seamlessly
+                        <br>
+                        <br>Get Started with cluster and Storage Scaling below.</p>
+                </div>
+                <button class="btn waves-effect waves-light dashboard-button" type="submit" id="scaleCluster_btn" name="scaleCluster">Scale Cluster
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="createClusterDiv" [hidden]="showDashboard">
+    <div class="card hoverable black" style="margin-top:-20px;height:112px;width:100%;">
+        <!--<div class="row">
+    <div class="col s6">-->
+        <p class="white-text" style="font-size:20px;margin:20px;">Create Cluster
+            <br>
+        </p>
+        <!--</div>
+    <div class="col s6"></div>
+  </div>-->
+
+   <!--Wizard progress starts -->
+            <!--creation_type options starts -->
+            <div class="row" style="margin-left: 1%;margin-right: 1%;margin-top: 41px;">
+                <div class="col s12" style="margin-top: -71px;">
+
+                    <form #dataform="ngForm" (ngSubmit)="createCluster(dataform.value,dataform)" novalidate>
+                        <div class="card hoverable" id="creation_type">
+                            <div class="card-content" style="margin-left: 80px;">
+                                <div class="row">
+                                    <h6>Let us create cluster</h6>
+                                    <br>
+                                    <br>
+                                    <label for="op2">Cluseter Name</label>
+                                    <input class="with-gap" name="group3" type="text" id="clusterName_id" style="width:225px;height:35px;margin-left:1%;margin-right:1%;" />
+                                    <br>
+                                    <br>
+                                    <label for="op2">Description </label>
+                                    <input class="with-gap" name="group3" type="text" id="clusterDesc_id" style="width:225px;height:35px;margin-left:1%;margin-right:1%;" />
+                                    <br>
+                                    <br>
+                                    <label for="op2">AGN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                        <div id="agn_div_id" lass="input-field col s12 leftAlign">
+                                            <input type="checkBox"  id="Denver"/>
+                                            <label for="Denver">Denver&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                            <input type="checkBox"  id="Colorado"/>
+                                            <label for="Colorado">Colorado</label>
+                                        </div>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <label for="op2">Region&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                    <select class="browser-default" id="dataSource" name="inputSource" ngModel (change)="showHideInput($event.target.value)" style="width:225px;height:35px;margin-left:1%;margin-right:1%;">
+                                        <option value="" disabled selected>Central US</option>
+                                        <option value="uploadFile" data-icon="assets/images/uploadFile.png" class="left circle">West US </option>
+                                        <option value="Http" data-icon="assets/images/http.png" class="left circle">North US</option>
+                                        <option value="ftp" data-icon="assets/images/ftp.png" class="left circle">Central Asia</option>
+                                        <option value="ftp" data-icon="assets/images/ftp.png" class="left circle">North Europe</option>
+                                        <option value="ftp" data-icon="assets/images/ftp.png" class="left circle">Central Europe</option>
+                                        <option value="ftp" data-icon="assets/images/ftp.png" class="left circle">Central Africa</option>
+                                    </select>
+                                    <br>
+                                    <br>
+                                    <label for="op2">Storage</label>
+                                    <input class="with-gap" name="group3" type="radio" id="op1" checked (click)="selectedCreateType('easyMode')" />
+                                    <label for="op2">1 TB</label>
+                                    <input class="with-gap" name="group3" type="radio" id="op1" checked (click)="selectedCreateType('easyMode')" />
+                                    <label for="op2">10 TB</label>
+                                    <input class="with-gap" name="group3" type="radio" id="op1" checked (click)="selectedCreateType('easyMode')" />
+                                    <label for="op2">Maximum</label>
+                                    <br>
+                                    <br>
+                                    <label for="op2">Total Nodes</label>
+                                     <select class="browser-default" id="dataSource" name="inputSource" ngModel (change)="showHideInput($event.target.value)" style="width:225px;height:35px;margin-left:1%;margin-right:1%;">
+                                        <option value="" disabled selected>4 Worker / 2 Master</option>
+                                        <option value="uploadFile" data-icon="assets/images/uploadFile.png" class="left circle">16 Worker / 4 Master</option>
+                                        <option value="Http" data-icon="assets/images/http.png" class="left circle">64 Worker / 8 Master</option>
+                                        <option value="ftp" data-icon="assets/images/ftp.png" class="left circle">256 Worker / 16 Master</option>
+                                    </select>
+                                    <div class="row" style="margin-top: 61px;">
+                                    <div class=" col s2 right wizard_next_second">
+                                        <a class="waves-effect waves-light btn-large defaultColor" id='next_btn_3' (click)="createCluster('general_info')" style="width: 100%">Create Cluster</a>
+                                    </div>
+                                    <div class=" col s2 right wizard_previous">
+                                        <a class="waves-effect waves-light btn-large defaultColor" id='previous_btn_3' (click)="showClusterPage('general_info')" style="width: 100%">Back</a>
+                                    </div>
+                                </div>
+                                </div>
+            <!-- main div ends-->
+        </div>
+    </div>
